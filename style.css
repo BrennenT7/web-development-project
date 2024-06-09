@@ -50,6 +50,15 @@ button:hover {
     background-color: #555;
 }
 
+a {
+    color: #0073b1; /* LinkedIn's color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 /* About Page Styles */
 .about-content {
     display: flex;
