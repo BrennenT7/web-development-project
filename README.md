@@ -1,4 +1,4 @@
-# brennent7.github.io
+# web-development-project
 Project Title: Clearly state the name of your project.
 Description: Provide a brief description of what the project does.
 Installation Instructions: If applicable, explain how to set up and run your project.
