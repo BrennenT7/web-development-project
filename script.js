@@ -18,21 +18,12 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     const message = document.getElementById('message').value;
 
     if (name && email && message) {
-        // Code to handle form submission
-        fetch('/submitForm', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ name, email, message }),
-        })
-        .then(response => response.json())
-        .then(data => {
-            alert('Form submitted successfully!');
-        })
-        .catch((error) => {
-            alert('Error submitting form: ' + error.message);
-        });
+        // Simulate form submission
+        console.log('Form submitted successfully!');
+        alert('Form submitted successfully!');
+
+        // Clear the form fields
+        document.getElementById('contactForm').reset();
     } else {
         alert('Please fill out all fields.');
     }
