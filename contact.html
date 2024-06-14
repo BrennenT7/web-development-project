@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the web page -->
     <title>Contact</title>
+    <!-- Link to the CSS file for styling -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
+                <!-- Navigation links to other pages -->
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -17,17 +20,23 @@
         </nav>
     </header>
     <main>
+        <!-- Main heading of the page -->
         <h1>Contact Me</h1>
+        <!-- Contact form for user submissions -->
         <form id="contactForm" action="/submitForm" method="POST">
+            <!-- Label and input for user's name -->
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
             
+            <!-- Label and input for user's email -->
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
             
+            <!-- Label and textarea for user's message -->
             <label for="message">Message:</label>
             <textarea id="message" name="message" required></textarea>
             
+            <!-- Submit button for the form -->
             <button type="submit">Submit</button>
         </form>
     </main>
