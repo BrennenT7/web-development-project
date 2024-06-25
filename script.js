@@ -19,11 +19,22 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
     if (name && email && message) {
         // Simulate form submission
-        console.log('Form submitted successfully!');
-        alert('Form submitted successfully!');
-
-        // Clear the form fields
-        document.getElementById('contactForm').reset();
+        fetch('/submitForm', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, email, message }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+            // Clear the form fields
+            document.getElementById('contactForm').reset();
+        })
+        .catch((error) => {
+            alert('Error submitting form: ' + error.message);
+        });
     } else {
         alert('Please fill out all fields.');
     }
